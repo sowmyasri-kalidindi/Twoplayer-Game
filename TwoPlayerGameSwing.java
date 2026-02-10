@@ -1,86 +1,153 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Random;
+import java.util.*;
 import javax.swing.*;
 
-public class TwoPlayerGame implements ActionListener {
+class TwoPlayerGameSwing implements ActionListener {
 
     JFrame frame = new JFrame();
-    JLabel status = new JLabel();
-    JPanel board = new JPanel();
-    JButton[] buttons = new JButton[9];
+    JPanel t_panel = new JPanel();
+    JPanel bt_panel = new JPanel();
+    JLabel textfield = new JLabel();
+    JButton[] bton = new JButton[9];
 
-    boolean playerX;
-    int moves = 0;
+    int chance_flag = 0;
+    Random random = new Random();
+    boolean pl1_chance;
 
-    public TwoPlayerGame() {
-        frame.setTitle("Tic Tac Toe");
-        frame.setSize(400, 450);
+    TwoPlayerGameSwing() {
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 500);
+        frame.getContentPane().setBackground(new Color(250, 184, 97));
+        frame.setTitle("Tic Tac Toe Game");
         frame.setLayout(new BorderLayout());
 
-        status.setFont(new Font("Arial", Font.BOLD, 24));
-        status.setHorizontalAlignment(JLabel.CENTER);
-        frame.add(status, BorderLayout.NORTH);
+        textfield.setBackground(Color.BLACK);
+        textfield.setForeground(Color.RED);
+        textfield.setFont(new Font("Serif", Font.BOLD, 50));
+        textfield.setHorizontalAlignment(JLabel.CENTER);
+        textfield.setText("Tic Tac Toe");
+        textfield.setOpaque(true);
 
-        board.setLayout(new GridLayout(3, 3));
+        t_panel.setLayout(new BorderLayout());
+        t_panel.add(textfield);
+
+        bt_panel.setLayout(new GridLayout(3, 3));
+        bt_panel.setBackground(Color.BLACK);
+
         for (int i = 0; i < 9; i++) {
-            buttons[i] = new JButton();
-            buttons[i].setFont(new Font("Arial", Font.BOLD, 60));
-            buttons[i].addActionListener(this);
-            board.add(buttons[i]);
+            bton[i] = new JButton("");
+            bton[i].setFont(new Font("Serif", Font.BOLD, 100));
+            bton[i].setFocusable(false);
+            bton[i].addActionListener(this);
+            bton[i].setBackground(Color.CYAN);
+            bt_panel.add(bton[i]);
         }
 
-        frame.add(board);
-        startGame();
+        frame.add(t_panel, BorderLayout.NORTH);
+        frame.add(bt_panel);
         frame.setVisible(true);
+
+        startGame();
     }
 
-    void startGame() {
-        Random r = new Random();
-        playerX = r.nextBoolean();
-        status.setText(playerX ? "Player X Turn" : "Player O Turn");
+    public void startGame() {
+        int chance = random.nextInt(100);
+        pl1_chance = chance % 2 == 0;
+        textfield.setText(pl1_chance ? "Player X Turn" : "Player O Turn");
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        JButton btn = (JButton) e.getSource();
-        if (!btn.getText().equals("")) return;
+    public void gameOver(String msg) {
+        Object[] options = {"Restart", "Exit"};
+        int n = JOptionPane.showOptionDialog(
+                frame,
+                msg,
+                "Game Over",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                options,
+                options[0]);
 
-        btn.setText(playerX ? "X" : "O");
-        moves++;
-        checkWinner();
-
-        playerX = !playerX;
-        status.setText(playerX ? "Player X Turn" : "Player O Turn");
+        if (n == 0) {
+            frame.dispose();
+            new TwoPlayerGameSwing();
+        } else {
+            frame.dispose();
+        }
     }
 
-    void checkWinner() {
-        int[][] win = {
+    public void matchCheck() {
+
+        int[][] wins = {
                 {0,1,2},{3,4,5},{6,7,8},
                 {0,3,6},{1,4,7},{2,5,8},
                 {0,4,8},{2,4,6}
         };
 
-        for (int[] w : win) {
-            if (!buttons[w[0]].getText().equals("") &&
-                buttons[w[0]].getText().equals(buttons[w[1]].getText()) &&
-                buttons[w[1]].getText().equals(buttons[w[2]].getText())) {
+        for (int[] w : wins) {
+            if (bton[w[0]].getText().equals("X") &&
+                bton[w[1]].getText().equals("X") &&
+                bton[w[2]].getText().equals("X")) {
+                xWins(w[0], w[1], w[2]);
+                return;
+            }
 
-                status.setText("Player " + buttons[w[0]].getText() + " Wins!");
-                disableButtons();
+            if (bton[w[0]].getText().equals("O") &&
+                bton[w[1]].getText().equals("O") &&
+                bton[w[2]].getText().equals("O")) {
+                oWins(w[0], w[1], w[2]);
                 return;
             }
         }
 
-        if (moves == 9) {
-            status.setText("Game Draw!");
+        if (chance_flag == 9) {
+            gameOver("Game Draw!");
         }
     }
 
-    void disableButtons() {
-        for (JButton b : buttons) {
-            b.setEnabled(false);
+    public void xWins(int a, int b, int c) {
+        highlight(a, b, c);
+        gameOver("Player X Wins!");
+    }
+
+    public void oWins(int a, int b, int c) {
+        highlight(a, b, c);
+        gameOver("Player O Wins!");
+    }
+
+    void highlight(int a, int b, int c) {
+        bton[a].setBackground(Color.YELLOW);
+        bton[b].setBackground(Color.YELLOW);
+        bton[c].setBackground(Color.YELLOW);
+        for (JButton btn : bton) btn.setEnabled(false);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        for (int i = 0; i < 9; i++) {
+            if (e.getSource() == bton[i] && bton[i].getText().equals("")) {
+
+                if (pl1_chance) {
+                    bton[i].setForeground(Color.BLUE);
+                    bton[i].setText("X");
+                    textfield.setText("Player O Turn");
+                } else {
+                    bton[i].setForeground(Color.GREEN);
+                    bton[i].setText("O");
+                    textfield.setText("Player X Turn");
+                }
+
+                pl1_chance = !pl1_chance;
+                chance_flag++;
+                matchCheck();
+            }
         }
+    }
+
+    public static void main(String[] args) {
+        new TwoPlayerGameSwing();
     }
 }
