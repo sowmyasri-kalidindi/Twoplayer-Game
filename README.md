@@ -14,11 +14,11 @@ A Java-based Tic Tac Toe game built from scratch using Java Swing. The game feat
 - 🌈 HTML & CSS – custom colors & styling
 
  ▶️ How to Run
- Clone the repository:
+ - Clone the repository:
      git clone <your-repo-url>
- Open the project in any Java IDE (Eclipse / IntelliJ / VS Code)
- Compile and run the Main class
- Enjoy playing game
+ - Open the project in any Java IDE (Eclipse / IntelliJ / VS Code)
+ - Compile and run the Main class
+ - Enjoy playing game
 
 📌 Learning Outcomes
 - 🏗️ Hands-on Java Swing GUI development – built a functional GUI from scratch
