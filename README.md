@@ -13,6 +13,15 @@ A Java-based Tic Tac Toe game built from scratch using Java Swing. The game feat
 - ⚡ AWT – event handling
 - 🌈 HTML & CSS – custom colors & styling
 
+🎨 Preview
+-<img width="1920" height="1029" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/6644251e-7872-4564-ab10-e8dc9d700420" />
+-<img width="1920" height="1024" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/de4efbc5-9c14-4ca7-ab54-2ecdd5ddb185" />
+-<img width="1920" height="1031" alt="Screenshot (20)" src="https://github.com/user-attachments/assets/4cc5b609-4920-45c5-b131-ff431e9bac0b" />
+
+
+
+
+
  ▶️ How to Run
  - Clone the repository
  - Open the project in any Java IDE (Eclipse / IntelliJ / VS Code)
