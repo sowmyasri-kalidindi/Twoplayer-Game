@@ -1,13 +1,21 @@
 🎮 Two Player Tic Tac Toe Game (Java Swing)
- -A GUI-based two-player Tic Tac Toe game developed using Java Swing and AWT, featuring an interactive interface and complete game logic. The application allows two players to play turn-by-turn, automatically detects winning and draw conditions, and provides restart functionality for continuous gameplay.
- -This project demonstrates practical implementation of Java programming, Object-Oriented Programming (OOP), GUI development, and event-driven programming.
+
+ A GUI-based two-player Tic Tac Toe game developed using Java Swing and AWT, featuring an interactive interface and complete game logic. The application allows two players to play turn-by-turn, automatically detects winning and draw conditions, and provides restart functionality for continuous gameplay.
+ This project demonstrates practical implementation of Java programming, Object-Oriented Programming (OOP), GUI development, and event-driven programming.
+
 
 🚀 Core Features
-- 🎲 Two-Player Gameplay
-	-•Supports two players on the same system
-	-•	Players alternate between X and O
-	-•	Automatically switches turns
-	-•	Prevents selecting already filled cells
+
+  🎲 Two-Player Gameplay
+
+	  Supports two players on the same system
+
+	  Players alternate between X and O
+
+	  Automatically switches turns
+
+	  Prevents selecting already filled cells
+
 
 -🖥️ Interactive GUI
 	-•	Built using Java Swing
