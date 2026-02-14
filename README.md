@@ -7,13 +7,9 @@
 🚀 Core Features
 
   🎲 Two-Player Gameplay
-
 	  Supports two players on the same system
-
 	  Players alternate between X and O
-
 	  Automatically switches turns
-
 	  Prevents selecting already filled cells
 
 
