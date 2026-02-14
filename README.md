@@ -6,47 +6,43 @@
 
 🚀 Core Features
 
-  🎲 Two-Player Gameplay
+  🎲 Two-Player Gameplay<br>
+	  *Supports two players on the same system<br>
+	  *Players alternate between X and O<br>
+	  *Automatically switches turns<br>
+	  *Prevents selecting already filled cells<br>
 
-	  Supports two players on the same system
-	  Players alternate between X and O
-	  Automatically switches turns
-	  Prevents selecting already filled cells
 
+ 🖥️ Interactive GUI<br>
+	*Built using Java Swing<br>
+	*3×3 clickable game board<br>
+	*Clean and user-friendly interface<br>
+	*Custom fonts and colours<br>
 
--🖥️ Interactive GUI
+🏆 Win Detection System<br>
+	*Detects winning combinations<br>
+	*Rows<br>
+	*Columns<br>
+	*Diagonals<br>
+	*Displays winner and ends game<br>
 
-	-•	Built using Java Swing
-	-•	3×3 clickable game board
-	-•	Clean and user-friendly interface
-	-•	Custom fonts and colors
+🤝 Draw Detection<br>
+	*Detects when board is full<br>
+	*Displays draw result<br>
 
--🏆 Win Detection System
+🔄 Restart Functionality<br>
+	*Restart game without closing application<br>
+	*Resets board and game state<br>
 
-	-•	Detects winning combinations:
-	-•	Rows
-	-•	Columns
-	-•	Diagonals
-	-•	Displays winner and ends game
+🛠️ Technologies<br>
 
--🤝 Draw Detection
+ 💻 Java – Core programming and game logic<br>
+	🎨 Java Swing – GUI components and interface<br>
+	⚡ AWT – Event handling and user interaction<br>
+	🌐 HTML – Used for structuring UI styling elements<br>
+	🎨 CSS – Used for custom colors and visual styling<br>
+	🧠 Object-Oriented Programming (OOP) – Code structure and design<br>
 
-	-•	Detects when board is full
-	-•	Displays draw result
-
--🔄 Restart Functionality
-
-	-•	Restart game without closing application
-	-•	Resets board and game state
-
-🛠️ Technologies
-
- -• 💻 Java – Core programming and game logic
-	-•	🎨 Java Swing – GUI components and interface
-	-•	⚡ AWT – Event handling and user interaction
-	-•	🌐 HTML – Used for structuring UI styling elements
-	-•	🎨 CSS – Used for custom colors and visual styling
-	-•	🧠 Object-Oriented Programming (OOP) – Code structure and design
 🎨 Preview
 -<img width="1920" height="1029" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/6644251e-7872-4564-ab10-e8dc9d700420" />
 -<img width="1920" height="1024" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/de4efbc5-9c14-4ca7-ab54-2ecdd5ddb185" />
@@ -57,27 +53,25 @@
 
  
  ⚙️ How It Works<br>
-	*Creates game window using JFrame
-	*Displays 3×3 grid using buttons
-	*Players click to place X or O
-	*System checks winner after each move
-	*Displays result
-	*Allows restart
+	*Creates game window using JFrame<br>
+	*Displays 3×3 grid using buttons<br>
+	*Players click to place X or O<br>
+	*System checks winner after each move<br>
+	*Displays result<br>
+	*Allows restart<br>
 
- ▶️ How to Run
+ ▶️ How to Run<br>
+ *Clone the repository<br>
+ *Open the project in any Java IDE<br>
+ *Compile and run the Main class<br>
+ *Enjoy playing game<br>
 
- *Clone the repository
- *Open the project in any Java IDE (Eclipse / IntelliJ / VS Code)
- *Compile and run the Main class
- *Enjoy playing game
-
-📌 Learning Outcomes
-
- *Developed Java GUI application using Swing
-	*Applied Object-Oriented Programming concepts
-	*Implemented event-driven programming
-	*Built complete game logic system
-	*Improved problem-solving skills
+📌 Learning Outcomes<br>
+ *Developed Java GUI application using Swing<br>
+	*Applied Object-Oriented Programming concepts<br>
+	*Implemented event-driven programming<br>
+	*Built complete game logic system<br>
+	*Improved problem-solving skills<br>
 
 
 
