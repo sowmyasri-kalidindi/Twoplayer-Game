@@ -7,6 +7,7 @@
 🚀 Core Features
 
   🎲 Two-Player Gameplay
+
 	  Supports two players on the same system
 	  Players alternate between X and O
 	  Automatically switches turns
@@ -14,12 +15,14 @@
 
 
 -🖥️ Interactive GUI
+
 	-•	Built using Java Swing
 	-•	3×3 clickable game board
 	-•	Clean and user-friendly interface
 	-•	Custom fonts and colors
 
 -🏆 Win Detection System
+
 	-•	Detects winning combinations:
 	-•	Rows
 	-•	Columns
@@ -27,14 +30,17 @@
 	-•	Displays winner and ends game
 
 -🤝 Draw Detection
+
 	-•	Detects when board is full
 	-•	Displays draw result
 
 -🔄 Restart Functionality
+
 	-•	Restart game without closing application
 	-•	Resets board and game state
 
 🛠️ Technologies
+
  -• 💻 Java – Core programming and game logic
 	-•	🎨 Java Swing – GUI components and interface
 	-•	⚡ AWT – Event handling and user interaction
@@ -50,26 +56,28 @@
 
 
  
- ⚙️ How It Works
-	-•	Creates game window using JFrame
-	-•	Displays 3×3 grid using buttons
-	-•	Players click to place X or O
-	-•	System checks winner after each move
-	-•	Displays result
-	-•	Allows restart
+ ⚙️ How It Works<br>
+	*Creates game window using JFrame
+	*Displays 3×3 grid using buttons
+	*Players click to place X or O
+	*System checks winner after each move
+	*Displays result
+	*Allows restart
 
  ▶️ How to Run
- - Clone the repository
- - Open the project in any Java IDE (Eclipse / IntelliJ / VS Code)
- - Compile and run the Main class
- - Enjoy playing game
+
+ *Clone the repository
+ *Open the project in any Java IDE (Eclipse / IntelliJ / VS Code)
+ *Compile and run the Main class
+ *Enjoy playing game
 
 📌 Learning Outcomes
- -•	Developed Java GUI application using Swing
-	-•	Applied Object-Oriented Programming concepts
-	-•	Implemented event-driven programming
-	-•	Built complete game logic system
-	-•	Improved problem-solving skills
+
+ *Developed Java GUI application using Swing
+	*Applied Object-Oriented Programming concepts
+	*Implemented event-driven programming
+	*Built complete game logic system
+	*Improved problem-solving skills
 
 
 
